@@ -5,7 +5,7 @@ if (isset($_SESSION['log'])) {
   $_SESSION['log'] = $_SESSION['log'] + 1;
   $log = $_SESSION['log'];
 } else {
-  $_SESSION['log'] = 0;
+  $_SESSION['log'] = 1;
 }
 
 define('USER', 'helloomooba@gmail.com');
@@ -42,7 +42,7 @@ else {
     echo json_encode($response);
   }
   else {
-    $response['text'] = "You'll need to tell me your ID";
+    $response['text'] = "you really need to tell me your ID";
     $response['status'] = "error";
     $response['log'] = $log;
     echo json_encode($response);
